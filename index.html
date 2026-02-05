@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+</head>
+
+<body style="margin-bottom: 600px;">
+
+
+    <form mehtod="get">
+        <input name="username">
+        <input name="email">
+        <select multiple name="tech" size="10">
+            <optgroup label="Frontend">
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JS</option>
+            </optgroup>
+
+            <optgroup label="Backend">
+                <option>Node</option>
+                <option>Django</option>
+                <option>Spring</option>
+            </optgroup>
+        </select>
+        
+        <button type="submit">Submit</button>
+    </form>
+<h1>Blog</h1>
+
+<h2>Frontend</h2>
+<h3>HTML</h3>
+<h3>CSS</h3>
+
+<h2>Backend</h2>
+<h3>Node</h3>
+
+
+<p class="prelike">
+Hello     Abhi
+How are you?
+</p>
+
+<style>
+.prelike {
+  white-space: pre;
+  font-family: monospace;
+}
+</style>
+
+<pre>
+Hello     Abhi
+How are you?
+</pre>
+
+
+
+<pre>
+function hello() {
+  console.log("Hi");
+}
+</pre>
+
+
+
+<pre>
+$ npm install
+added 125 packages
+</pre>
+
+
+<pre><code>
+const x = 10;
+</code></pre>
+
+
+
+Use <code>git status</code> to check changes.
+
+
+
+
+
+<div style="font-size:16px; border: 2px solid black; line-height:1.8;">
+  <b>Bold text</b><br>
+  <strong>Important text</strong><br>
+  <i>Italic text</i><br>
+  <em>Emphasized text</em><br>
+  <mark>Marked text</mark><br>
+  <small>Smaller text</small><br>
+  <del>Deleted text</del><br>
+  <ins>Inserted text</ins><br>
+  Subscript text: H<sub>2</sub>O<br>
+  Superscript text: x<sup>2</sup>
+</div>
+
+
+
+
+
+<p>
+He said <q>HTML is easy</q> and left.
+</p>
+
+
+
+
+
+
+<fieldset>
+  <legend>Personal Info</legend>
+
+  <input name="name">
+  <input name="age">
+</fieldset>
+
+
+
+
+<form id="signupForm" novalidate>
+  <input type="text" id="username" placeholder="Username">
+  <span id="userError"></span>
+
+  <input type="password" id="password" placeholder="Password">
+  <span id="passError"></span>
+
+  <button type="submit">Submit</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    const form = document.getElementById("signupForm");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // stop normal submit
+
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  let isValid = true;
+
+  if (username.length < 3) {
+    document.getElementById("userError").innerText = "Username too short";
+    isValid = false;
+  }
+
+  if (password.length < 6) {
+    document.getElementById("passError").innerText = "Password must be 6 chars";
+    isValid = false;
+  }
+
+  if (isValid) {
+    console.log("Form is valid");
+  }
+});
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const textarea = document.getElementById("ta1");
+
+    textarea.addEventListener("input", function () {
+      this.style.height = "auto";
+      this.style.height = this.scrollHeight + "px";
+    });
+  });
+
+</script>
+
+
+
+
+<textarea id="ta1" placeholder="Write message">Hello</textarea>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

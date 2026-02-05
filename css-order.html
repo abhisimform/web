@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Box Model – Visual Explanation</title>
+
+  <style>
+    * {
+      box-sizing: content-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f8fafc;
+      color: #0f172a;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    .scene {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    /* background that margin reveals */
+    .stage {
+      background: #f1f5f9;
+      padding: 70px;
+      border-radius: 10px;
+    }
+
+    /* smooth visual changes */
+    .margin-box,
+    .border-box,
+    .padding-box,
+    .content-box {
+      transition: all 0.15s ease;
+    }
+
+    /* margin (transparent, shows stage background) */
+    .margin-box {
+      background: transparent;
+      outline: 1px dashed #cbd5e1;
+    }
+
+    /* border */
+    .border-box {
+      background: #d1d5db;
+    }
+
+    /* padding */
+    .padding-box {
+      background: #d1fae5;
+    }
+
+    /* content */
+    .content-box {
+      background: #93c5fd;
+      color: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .label {
+      font-size: 12px;
+      opacity: 0.8;
+      letter-spacing: 1px;
+    }
+
+    .info {
+      margin-top: 30px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      line-height: 1.6;
+      border: 1px solid #e5e7eb;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>CSS BOX MODEL (Content → Padding → Border → Margin)</h1>
+
+  <div class="controls">
+    <label>Content Width
+      <input type="range" id="width" min="50" max="300" value="150">
+    </label>
+
+    <label>Content Height
+      <input type="range" id="height" min="50" max="200" value="80">
+    </label>
+
+    <label>Padding
+      <input type="range" id="padding" min="0" max="50" value="20">
+    </label>
+
+    <label>Border
+      <input type="range" id="border" min="0" max="20" value="5">
+    </label>
+
+    <label>Margin
+      <input type="range" id="margin" min="0" max="60" value="30">
+    </label>
+  </div>
+
+  <div class="scene">
+    <div class="stage">
+      <div class="margin-box" id="marginBox">
+        <div class="border-box" id="borderBox">
+          <div class="padding-box" id="paddingBox">
+            <div class="content-box" id="contentBox">
+              <span class="label">CONTENT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info" id="info"></div>
+
+  <script>
+    const width = document.getElementById("width");
+    const height = document.getElementById("height");
+    const padding = document.getElementById("padding");
+    const border = document.getElementById("border");
+    const margin = document.getElementById("margin");
+
+    const contentBox = document.getElementById("contentBox");
+    const paddingBox = document.getElementById("paddingBox");
+    const borderBox = document.getElementById("borderBox");
+    const marginBox = document.getElementById("marginBox");
+    const info = document.getElementById("info");
+
+    function update() {
+      contentBox.style.width = width.value + "px";
+      contentBox.style.height = height.value + "px";
+
+      paddingBox.style.padding = padding.value + "px";
+      borderBox.style.border = border.value + "px solid black";
+      marginBox.style.margin = margin.value + "px";
+
+      const totalWidth =
+        Number(width.value) +
+        Number(padding.value) * 2 +
+        Number(border.value) * 2 +
+        Number(margin.value) * 2;
+
+      info.innerHTML = `
+        <b>Order:</b> Content → Padding → Border → Margin<br><br>
+        <b>Content:</b> ${width.value}px × ${height.value}px<br>
+        <b>Padding:</b> ${padding.value}px (inside)<br>
+        <b>Border:</b> ${border.value}px (edge)<br>
+        <b>Margin:</b> ${margin.value}px (outside)<br><br>
+        <b>Total space used horizontally:</b> ${totalWidth}px
+      `;
+    }
+
+    document.querySelectorAll("input").forEach(input =>
+      input.addEventListener("input", update)
+    );
+
+    update();
+  </script>
+
+</body>
+</html>
