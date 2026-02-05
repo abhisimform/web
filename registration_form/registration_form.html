@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Registration Form</h2>
+
+        <form autocomplete="off">
+
+            <div class="field">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter full name" required minlength="3">
+            </div>
+
+            <div class="field">
+                <label>Search Username</label>
+                <input type="search" placeholder="Search..." required>
+            </div>
+
+            <div class="field">
+                <label>Email</label>
+                <input type="email" placeholder="example@mail.com" required>
+            </div>
+
+            <div class="field">
+                <label>Password</label>
+                <input type="password" pattern=".{8,}" title="Minimum 8 characters" required>
+            </div>
+
+            <div class="field">
+                <label>Phone</label>
+                <input type="tel" pattern="[0-9]{10}" title="10 digit number" required>
+            </div>
+
+            <div class="field">
+                <label>Website</label>
+                <input type="url" placeholder="www.example.com">
+            </div>
+
+            <div class="field">
+                <label>Age</label>
+                <input type="number" min="18" max="60" required>
+            </div>
+
+            <div class="field">
+                <label>Date of Birth</label>
+                <input type="date" required>
+            </div>
+
+            <div class="field">
+                <label>Preferred Time</label>
+                <input type="time">
+            </div>
+
+            <div class="field">
+                <label>Date & Time</label>
+                <input type="datetime-local">
+            </div>
+
+            <div class="field">
+                <label>Birth Month</label>
+                <input type="month">
+            </div>
+
+            <div class="field">
+                <label>Birth Week</label>
+                <input type="week">
+            </div>
+
+            <div class="field">
+                <label>Gender</label>
+                <div class="row">
+                    <label><input type="radio" name="gender"> Male</label>
+                    <label><input type="radio" name="gender"> Female</label>
+                    <label><input type="radio" name="gender"> Other</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Skills</label>
+                <div class="row">
+                    <label><input type="checkbox"> HTML</label>
+                    <label><input type="checkbox"> CSS</label>
+                    <label><input type="checkbox"> JS</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Country</label>
+                <select required>
+                    <option value="">Select</option>
+                    <option>India</option>
+                    <option>USA</option>
+                    <option>UK</option>
+                    <option>Canada</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>About You</label>
+                <textarea rows="4" placeholder="Hello, It's Me." required></textarea>
+            </div>
+
+            <div class="field">
+                <label>Favorite Color</label>
+                <input type="color" value="#02f7c6">
+            </div>
+
+            <div class="field">
+                <label>Experience Level</label>
+                <input type="range" min="0" max="10">
+            </div>
+
+            <div class="field">
+                <label>Upload Photo</label>
+                <input type="file" accept="image/*" required>
+            </div>
+
+            <input type="hidden" value="101">
+
+            <div class="buttons">
+                <button type="submit">Register</button>
+                <button type="reset">Clear</button>
+            </div>
+
+            <div class="field">
+                <label>Image Submit</label>
+                <input type="image" src="https://via.placeholder.com/120">
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
