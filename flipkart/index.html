@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart</title>
+
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <nav class="header">
+    <div class="nav-container">
+      <div class="log">
+        <img src="./images/logo.png" height="40rem" alt="Flipkart Logo">
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for products, brands and more">
+        <button><img class="search-icon" src="./images/search-icon.png" height="25px" width="25px"
+            alt="Search"></button>
+      </div>
+
+      <div class="mobile-only">
+        <button class="button"><i class="fa fa-bars"></i></button>
+      </div>
+
+      <div class="button-grp">
+        <button class="button">Login</button>
+        <button class="button">More</button>
+        <button class="button">
+          <i class="fa fa-shopping-cart"></i> Cart
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    const menuBtn = document.querySelector('.mobile-only button');
+    const menu = document.querySelector('.button-grp');
+
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+
+</body>
+
+</html>
