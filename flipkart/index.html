@@ -205,6 +205,29 @@
     const menuBtn = document.querySelector('.mobile-only button');
     const menu = document.querySelector('.button-grp');
 
+    const timer = document.querySelector('.deals-timer');
+
+    function updateTimer() {
+      const now = new Date();
+      const endOfDay = new Date(now);
+      endOfDay.setHours(23, 59, 59, 999);
+
+      const timeDifference = endOfDay - now;
+      const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+      timer.textContent = `⏰ ${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')} Left`;
+
+      if (timeDifference <= 0) {
+        clearInterval(timerInterval);
+        timer.textContent = "⏰ Midnight reached!";
+      }
+    }
+
+    const timerInterval = setInterval(updateTimer, 10000);
+    updateTimer();
+
     menuBtn.addEventListener('click', () => {
       menu.classList.toggle('active');
     });
