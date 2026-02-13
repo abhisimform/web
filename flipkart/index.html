@@ -17,10 +17,12 @@
       <div class="log">
         <img class="category-img" src="./images/logo.png" height="40rem" alt="Flipkart Logo">
       </div>
+
       <div class="search-bar">
         <input type="text" placeholder="Search for products, brands and more">
-        <button><img class="category-img" class="search-icon" src="./images/search-icon.png" height="25px" width="25px"
-            alt="Search"></button>
+        <button>
+          <img class="search-icon" src="./images/search-icon.png" height="25" width="25" alt="Search">
+        </button>
       </div>
 
       <div class="mobile-only">
@@ -28,34 +30,37 @@
       </div>
 
       <div class="button-grp">
-        <button class="button">Login</button>
-        <button class="button">More</button>
-        <button class="button">
+        <button class="button button-white">Login</button>
+        <button class="button button-theme">More</button>
+        <button class="button button-theme">
           <i class="fa fa-shopping-cart"></i> Cart
         </button>
       </div>
     </div>
   </nav>
 
-  <div class="category">
+  <div class="category-section">
+
     <div class="category-item">
       <img class="category-img" src="./images/top-offers.jpg" alt="Top Offers">
       <p>Top Offers</p>
     </div>
+
     <div class="category-item">
       <img class="category-img" src="./images/grocery.jpg" alt="Grocery">
       <p>Grocery</p>
     </div>
+
     <div class="category-item">
       <img class="category-img" src="./images/mobiles.webp" alt="Mobiles">
       <p>Mobiles</p>
     </div>
+
     <div class="category-item">
       <img class="category-img" src="./images/fashion.jpg" alt="Fashion">
       <div class="dropdown">
         <p class="dropbtn">
-          Fashion
-          <i class="fa fa-caret-down"></i>
+          Fashion <i class="fa fa-caret-down"></i>
         </p>
         <div class="dropdown-content">
           <a href="#">Men</a>
@@ -63,14 +68,13 @@
           <a href="#">Kids</a>
         </div>
       </div>
-
     </div>
+
     <div class="category-item">
-      <img class="category-img" src="./images/electronics.webp" alt="Fashion">
+      <img class="category-img" src="./images/electronics.webp" alt="Electronics">
       <div class="dropdown">
         <p class="dropbtn">
-          Electronics
-          <i class="fa fa-caret-down"></i>
+          Electronics <i class="fa fa-caret-down"></i>
         </p>
         <div class="dropdown-content">
           <a href="#">Laptops</a>
@@ -79,12 +83,12 @@
         </div>
       </div>
     </div>
+
     <div class="category-item">
-      <img class="category-img" src="./images/home.webp" alt="Fashion">
+      <img class="category-img" src="./images/home.webp" alt="Home">
       <div class="dropdown">
         <p class="dropbtn">
-          Home
-          <i class="fa fa-caret-down"></i>
+          Home <i class="fa fa-caret-down"></i>
         </p>
         <div class="dropdown-content">
           <a href="#">Furniture</a>
@@ -93,29 +97,108 @@
         </div>
       </div>
     </div>
+
     <div class="category-item">
-      <img class="category-img" src="./images/appliances.webp" alt="Fashion">
+      <img class="category-img" src="./images/appliances.webp" alt="Appliances">
       <div class="dropdown">
         <p class="dropbtn">
-          Appliances
-          <i class="fa fa-caret-down"></i>
+          Appliances <i class="fa fa-caret-down"></i>
         </p>
         <div class="dropdown-content">
-          <a href="#">Washing Machine</a>
+          <a href="#">Washing Machines</a>
           <a href="#">AC</a>
-          <a href="#">Refrigerator</a>
+          <a href="#">Refrigerators</a>
         </div>
       </div>
     </div>
+
     <div class="category-item text-center">
-      <img class="category-img" src="./images/travel.webp" alt="">
+      <img class="category-img" src="./images/travel.webp" alt="Travel">
       <div>Travel</div>
     </div>
+
     <div class="category-item text-center">
-      <img class="category-img" src="./images/beauty.webp" alt="">
+      <img class="category-img" src="./images/beauty.webp" alt="Beauty">
       <div>Beauty</div>
     </div>
+
   </div>
+
+  <div style="margin-bottom: 100px;" class="deals-section">
+    <div class="deals-container">
+      <div class="deals-heading">
+        <div class="one">
+          <div class="deals-title">Deals of the Day</div>
+          <div class="deals-timer">⏰ 12:00:00 Left</div>
+        </div>
+        <button class="button">VIEW ALL</button>
+      </div>
+
+      <div class="deals-items">
+
+        <div class="deal-item">
+          <img class="deal-img" src="./images/silver-watch.webp" alt="Casio & Fastrack Watches">
+          <p class="deal-desc">Casio & Fastrack Watches</p>
+          <p class="deal-offer">Up to 80% off</p>
+          <p class="deal-text-muted">Knockout sales</p>
+        </div>
+
+        <div class="deal-item">
+          <img class="deal-img" src="./images/home-temple.jpg" alt="Home & Temple Decor">
+          <p class="deal-desc">Home, Temple & More</p>
+          <p class="deal-offer">Extra 10% off</p>
+          <p class="deal-text-muted">Space-saving furniture</p>
+        </div>
+
+        <div class="deal-item">
+          <img class="deal-img" src="./images/tablet-case.webp" alt="Premium Tablet Cases">
+          <p class="deal-desc">Premium Tablet Cases</p>
+          <p class="deal-offer">Extra 10% off</p>
+          <p class="deal-text-muted">For all top models</p>
+        </div>
+
+        <div class="deal-item">
+          <img class="deal-img" src="./images/home.avif" alt="Home Decor">
+          <p class="deal-desc">Best Home Decor</p>
+          <p class="deal-offer">From ₹79</p>
+          <p class="deal-text-muted">Lowest ever prices</p>
+        </div>
+
+        <div class="deal-item">
+          <img class="deal-img" src="./images/tshirt.webp" alt="Clothing Deals">
+          <p class="deal-desc">Metronaut & Provogue</p>
+          <p class="deal-offer">From ₹249</p>
+          <p class="deal-text-muted">Jackets & Dresses</p>
+        </div>
+
+        <div class="deal-item">
+          <img class="deal-img" src="./images/google-pixel.webp" alt="Google Pixel">
+          <p class="deal-desc">Google Pixel</p>
+          <p class="deal-offer">Flat ₹830 off</p>
+          <p class="deal-text-muted">Now ₹999</p>
+        </div>
+
+        <div class="deal-item">
+          <img class="deal-img" src="./images/google-pixel.webp" alt="Google Pixel">
+          <p class="deal-desc">Google Pixel</p>
+          <p class="deal-offer">Flat ₹830 off</p>
+          <p class="deal-text-muted">Now ₹999</p>
+        </div>
+
+        <div class="deal-item">
+          <img class="deal-img" src="./images/google-pixel.webp" alt="Google Pixel">
+          <p class="deal-desc">Google Pixel</p>
+          <p class="deal-offer">Flat ₹830 off</p>
+          <p class="deal-text-muted">Now ₹999</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="deals-banner">
+      <img class="deals-banner-img" src="./images/banner.png" alt="Deals Banner">
+    </div>
+
   </div>
 
   <script>
