@@ -80,7 +80,6 @@ body {
 }
 
 @media (min-width: 768px) {
-
   .nav-container {
     max-width: 1200px;
     margin: auto;
@@ -139,6 +138,7 @@ body {
   text-align: center;
   width: 150px !important;
   margin: 0 10px;
+  position: relative;
 }
 
 .category-item img {
@@ -157,7 +157,7 @@ body {
     display: flex;
     gap: 0 20px;
     justify-content: center;
-    overflow: visible;
+    overflow: auto;
   }
 
   .category-item {
@@ -166,7 +166,7 @@ body {
 }
 
 .dropdown {
-  position: relative;
+  /* position: relative; */
   display: inline-block;
 }
 
@@ -176,10 +176,9 @@ body {
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  /* aspect-ratio: 1; */
   border-radius: 5px;
-  /* corner-shape: squircle; */
   z-index: 1;
+  bottom: 0;
 }
 
 .dropdown-content a {
