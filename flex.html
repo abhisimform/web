@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      display: flex;
+      border: 2px solid #333;
+      padding: 10px;
+      width: 200px; /* fixed container width */
+    }
+
+    .box {
+      flex:1 0 10px; /* stays at natural size */
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+</body>
+</html>
